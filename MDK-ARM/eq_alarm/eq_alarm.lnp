@@ -1,0 +1,29 @@
+--cpu Cortex-M3
+"eq_alarm\startup_stm32f103xb.o"
+"eq_alarm\stm32f1xx_hal_msp.o"
+"eq_alarm\main.o"
+"eq_alarm\stm32f1xx_it.o"
+"eq_alarm\tm_stm32_hd44780.o"
+"eq_alarm\sd_hal_mpu6050.o"
+"eq_alarm\stm32f1xx_hal_tim.o"
+"eq_alarm\stm32f1xx_hal_cortex.o"
+"eq_alarm\stm32f1xx_hal_pwr.o"
+"eq_alarm\stm32f1xx_hal_dma.o"
+"eq_alarm\stm32f1xx_hal_i2c.o"
+"eq_alarm\stm32f1xx_hal_gpio_ex.o"
+"eq_alarm\stm32f1xx_hal.o"
+"eq_alarm\stm32f1xx_hal_flash_ex.o"
+"eq_alarm\stm32f1xx_hal_gpio.o"
+"eq_alarm\stm32f1xx_hal_adc.o"
+"eq_alarm\stm32f1xx_hal_rcc_ex.o"
+"eq_alarm\stm32f1xx_hal_flash.o"
+"eq_alarm\stm32f1xx_hal_adc_ex.o"
+"eq_alarm\stm32f1xx_hal_tim_ex.o"
+"eq_alarm\stm32f1xx_hal_uart.o"
+"eq_alarm\stm32f1xx_hal_rcc.o"
+"eq_alarm\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "eq_alarm\eq_alarm.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "eq_alarm.map" -o eq_alarm\eq_alarm.axf
